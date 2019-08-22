@@ -24,7 +24,10 @@ export default class Main extends Component {
 
   renderButton() {
     if (this.state.estado === false && this.state.acertou === false) {
-      return <Button label="Entrar" click={this.iniciarJogo} />;
+      return [
+        <h4>Mentalize um número e clique em entrar</h4>,
+        <Button label="Entrar" click={this.iniciarJogo} />
+      ];
     } else if (this.state.estado === true && this.state.acertou === false) {
       return [
         <h3>Seu numero é {this.state.chutes} ?</h3>,
@@ -91,7 +94,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div key={this.state.id}>
         <h3>Game Adivinha meu numero.</h3>
         {this.renderButton()}
       </div>
