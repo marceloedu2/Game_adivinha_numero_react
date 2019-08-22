@@ -1,0 +1,19 @@
+:root {
+  --bg-button: #0d99eb;
+  --border-button: solid 1px #0167ff;
+  --color-button: #ffffff;
+}
+.button {
+  font-size: 1.4em;
+  color: var(--color-button);
+  background-color: var(--bg-button);
+  border: none;
+  border-right: var(--border-button);
+  border-bottom: var(--border-button);
+  border-radius: 5px;
+  outline: none;
+  margin: 10px;
+}
+.button:active {
+  background-color: #0167ff;
+}
